@@ -9,9 +9,12 @@ public abstract class Car {
     protected int width;
     protected int height;
 
-    public Car(String carModel, int carPrice) {
+    public Car(String carModel, int carPrice, int length, int width, int height) {
         this.carModel = carModel;
         this.carPrice = carPrice;
+        this.length = length;
+        this.width = width;
+        this.height = height;
     }
 
     public int getCarPrice() {

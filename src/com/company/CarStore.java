@@ -7,8 +7,11 @@ public class CarStore {
     private List<Car> carsInStore = new ArrayList<Car>();
 
     public void addCar(Car car) throws OutOfFreePlaceException {
-        if(carsInStore.size()>3){
+        if (carsInStore.size() > 3) {
             throw new OutOfFreePlaceException();
+        }
+        if (car.getCarPrice() > 70000) {
+            throw new TooBigCarException();
         }
 
         carsInStore.add(car);
