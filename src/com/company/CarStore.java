@@ -10,7 +10,7 @@ public class CarStore {
         if (carsInStore.size() > 3) {
             throw new OutOfFreePlaceException();
         }
-        if (car.getCarPrice() > 70000) {
+        if (car.calculateCarSize() > 10000) {
             throw new TooBigCarException();
         }
 
